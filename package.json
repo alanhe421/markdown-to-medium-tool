@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "BUILD_PATH=./docs react-scripts build",
+    "build": "BUILD_PATH=./docs PUBLIC_URL=/markdown-to-medium-tool react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
