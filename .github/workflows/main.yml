@@ -48,6 +48,9 @@ jobs:
           git config --global user.email "alan@1991421.cn"
           git config --global user.name "Alan He"
           npm run build
+      - name: Build
+        run: |
+          git add docs
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
