@@ -42,7 +42,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install Dependencies
         run: |
-          npm install
+          npm install --force
       - name: Build
         run: |
           git config --global user.email "alan@1991421.cn"
