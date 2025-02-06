@@ -1,6 +1,6 @@
-import marked from 'marked';
+import { marked } from 'marked';
 
-let renderer = new marked.Renderer();
+const renderer = new marked.Renderer();
 
 marked.setOptions({
   renderer: renderer,
