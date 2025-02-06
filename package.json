@@ -14,16 +14,17 @@
   "dependencies": {
     "marked": "^15.0.6",
     "material-ui": "^0.20.2",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
-    "react-redux": "5.0.6",
-    "redux": "3.5.2"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "9.2.0",
+    "react-toastify": "^11.0.3",
+    "redux": "5.0.1"
   },
   "devDependencies": {
-    "react-scripts": "5.0.1",
     "@babel/core": "^7.x",
     "@babel/preset-env": "^7.x",
-    "@babel/preset-react": "^7.x"
+    "@babel/preset-react": "^7.x",
+    "react-scripts": "5.0.1"
   },
   "browserslist": {
     "production": [
