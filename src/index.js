@@ -1,5 +1,4 @@
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -8,12 +7,14 @@ import App from './app.js';
 import './index.css';
 import { store } from './state.js';
 
+const theme = createTheme(); // 你可以在这里自定义主题
+
 const WrappedApp = props => {
   return (
     <Provider store={store}>
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <ThemeProvider theme={theme}>
         <App />
-      </MuiThemeProvider>
+      </ThemeProvider>
     </Provider>
   );
 }

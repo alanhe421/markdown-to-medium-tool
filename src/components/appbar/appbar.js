@@ -1,6 +1,5 @@
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import ContentContentCopy from 'material-ui/svg-icons/content/content-copy';
+import { AppBar as MuiAppBar, IconButton, Toolbar, Typography } from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import React from 'react';
 import { connect } from 'react-redux';
 import { toast, ToastContainer } from "react-toastify";
@@ -32,15 +31,20 @@ const Bar = props => {
   return (
     <div>
       <ToastContainer />
-      <AppBar
-        title="Markdown to Medium"
-        showMenuIconButton={false}
-        iconElementRight={
-          <IconButton onClick={handleCopy} tooltip="复制到剪贴板">
-            <ContentContentCopy color="#fff" />
+      <MuiAppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Markdown to Medium
+          </Typography>
+          <IconButton 
+            color="inherit" 
+            onClick={handleCopy} 
+            title="复制到剪贴板"
+          >
+            <ContentCopyIcon />
           </IconButton>
-        }
-      />
+        </Toolbar>
+      </MuiAppBar>
     </div>
   );
 };
