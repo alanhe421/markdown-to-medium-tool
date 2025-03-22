@@ -19,7 +19,24 @@ const Bar = props => {
     // 执行复制命令
     try {
       document.execCommand('copy');
-      toast("已复制到剪贴板！")
+      toast(() => (
+        <div>
+          已复制到剪贴板！
+          <a 
+            href="https://medium.com/new-story" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ color: '#2196F3', marginLeft: '8px' }}
+          >
+            去 Medium 发布
+          </a>
+        </div>
+      ), {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+      });
     } catch (err) {
       console.error('复制失败:', err);
     }
@@ -30,7 +47,10 @@ const Bar = props => {
 
   return (
     <div>
-      <ToastContainer />
+      <ToastContainer 
+        position="top-right"
+        style={{ top: '70px' }}
+      />
       <MuiAppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
