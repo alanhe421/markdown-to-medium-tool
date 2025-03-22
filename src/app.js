@@ -6,6 +6,7 @@ import HalfPage from './components//halfpage/halfpage.js';
 import TextField from './components//textfield/textfield.js';
 import Medium from './components/medium/medium.js';
 import AppBar from './components/appbar/appbar.js';
+import Footer from './components/footer/footer.js';
 import './app.css';
 
 export const App = props => {
@@ -76,6 +77,7 @@ export const App = props => {
           <Medium />
         </HalfPage>
       </div>
+      <Footer />
     </div>
   );
 };
